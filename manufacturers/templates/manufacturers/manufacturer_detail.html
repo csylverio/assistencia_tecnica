@@ -1,0 +1,9 @@
+{% extends "base/base.html" %}
+
+{% block content %}
+
+    <p><a href="{% url 'manufacturers:manufacturers' %}">Fabricantes</a></p>
+
+    <p><strong>Fabricante:</strong> {{ manufacturer.name }}</p> 
+
+{% endblock %}
