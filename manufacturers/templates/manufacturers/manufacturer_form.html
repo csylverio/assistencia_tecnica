@@ -1,11 +1,22 @@
-{% extends "base/base.html" %}
+{% extends "base/base_crud.html" %}
+{% load bootstrap5 %}
 
-{% block content %}
+{% block content_htitle %}Fabricantes{% endblock %}
 
-<form action="" method="post">
-    {% csrf_token %}
-    {{ form.as_p }}
-    <input type="submit" value="Submit">
-  </form>
+{% block content_hdescription %}Cadastro do fabricante de aparelho{% endblock %}
 
+{% block content_hbutton %}
+    <a class="btn btn-primary btn-sm" href="{% url 'manufacturers:manufacturers' %}" title="Voltar">Voltar</a>
+{% endblock %}
+
+{% block content_crud %}
+
+<form action="" method="post" class="form">
+  {% csrf_token %}
+  {% bootstrap_form form %}
+  {% buttons %}
+    <input class="btn btn-success btn-sm" type="submit" title="Salvar" value="Salvar">
+  {% endbuttons %}
+</form>
+    
 {% endblock %}

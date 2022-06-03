@@ -1,0 +1,23 @@
+{% extends "base/base.html" %}
+
+{% block content %}
+
+    <div class="container">
+
+        <div class="py-3">
+            <h2>{% block content_htitle %}{% endblock %}</h2>
+            <div class="row">
+                <div class="col-md-2 order-md-2 mb-4">
+                    {% block content_hbutton %}{% endblock %}
+                </div>
+                <div class="col-md-10 order-md-1">
+                    <p class="lead">{% block content_hdescription %}{% endblock %}</p>
+                </div>
+            </div>
+        </div>
+
+        {% block content_crud %}
+        {% endblock %}
+    </div>
+    
+{% endblock %}
