@@ -18,8 +18,8 @@ class ManufacturerCreate(generic.CreateView):
     model = Manufacturer
     fields = '__all__'
     template_name = 'manufacturers/manufacturer_form.html'
-
-
+    
+    
 class ManufacturerUpdate(generic.UpdateView):
     model = Manufacturer
     fields = ['name']

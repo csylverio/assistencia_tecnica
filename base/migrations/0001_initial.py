@@ -12,7 +12,17 @@ class Migration(migrations.Migration):
 
     operations = [
         migrations.CreateModel(
-            name='Manufacturer',
+            name='PaymentForm',
+            fields=[
+                ('id', models.AutoField(editable=False, primary_key=True, serialize=False)),
+                ('name', models.CharField(max_length=50)),
+            ],
+            options={
+                'ordering': ['name'],
+            },
+        ),
+        migrations.CreateModel(
+            name='PaymentTerm',
             fields=[
                 ('id', models.AutoField(editable=False, primary_key=True, serialize=False)),
                 ('name', models.CharField(max_length=50)),

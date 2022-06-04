@@ -3,7 +3,7 @@ from .models import Device
 
 
 class DeviceAdmin(admin.ModelAdmin):
-    list_display = ('manufacturer', 'code', 'description', 'model')
+    list_display = ('model', 'manufacturer', 'code', 'color')
 
 
 admin.site.register(Device, DeviceAdmin)
