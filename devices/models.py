@@ -10,7 +10,7 @@ class Device(models.Model):
     voltage = models.IntegerField(blank=False, null=False)
     model = models.CharField(max_length=50, blank=False, null=False)
     color = models.CharField(max_length=20, blank=False, null=False)
-    createdat = models.DateTimeField(auto_now_add=True)
+    create_date = models.DateTimeField(auto_now_add=True)
 
     def get_absolute_url(self):
         return reverse('devices:device-detail', args=[str(self.id)])

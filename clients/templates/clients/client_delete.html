@@ -1,0 +1,23 @@
+{% extends "base/base_crud.html" %}
+{% load bootstrap5 %}
+
+{% block content_htitle %}Clientes{% endblock %}
+
+{% block content_hdescription %}Cadastro de cliente{% endblock %}
+
+{% block content_hbutton %}
+    <a class="btn btn-primary btn-sm" href="{% url 'clients:clients' %}" title="Voltar">Voltar</a>
+{% endblock %}
+
+{% block content_crud %}
+
+<p>Você deseja excluir "{{ client.name }} - {% if client.type == client.PF %} {{ client.cpf }} {% else %} {{ client.cnpj }} {% endif %}"?</p>
+<form action="" method="post" class="form">
+  {% csrf_token %}
+  {{ form }}
+  {% buttons %}
+    <input class="btn btn-danger btn-sm" type="submit" title="Excluir" value="Excluir">
+  {% endbuttons %}
+</form>
+    
+{% endblock %}

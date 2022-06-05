@@ -16,7 +16,7 @@ class ManufacturerDetailView(generic.DetailView):
     
 class ManufacturerCreate(generic.CreateView):
     model = Manufacturer
-    fields = '__all__'
+    fields = ['name']
     template_name = 'manufacturers/manufacturer_form.html'
     
     
